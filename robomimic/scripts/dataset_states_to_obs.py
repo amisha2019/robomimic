@@ -212,6 +212,7 @@ def dataset_states_to_obs(args):
 
     # create environment to use for data processing
     env_meta = FileUtils.get_env_metadata_from_dataset(dataset_path=args.dataset)
+    # env_meta["env_name"] = "PickPlaceCan"
     env = EnvUtils.create_env_for_data_processing(
         env_meta=env_meta,
         camera_names=args.camera_names, 
